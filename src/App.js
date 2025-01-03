@@ -1,11 +1,17 @@
-import NavBar1 from "./components/NavBars/NavBar1";
+import SignIn from "./components/Login/Signin";
 
+import { Routes, Route } from "react-router-dom";
+
+import Dashboard from "./components/Login/Dashboard";
 
 
 function App() {
   return (
     <>
-      <NavBar1 />
+    <Routes>
+      <Route path="/" element={<SignIn />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
     </>
   );
 }
